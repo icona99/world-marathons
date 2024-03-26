@@ -1,0 +1,19 @@
+.marathon-container {
+  background-color: #027efa;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 500px; /* Ширина на контейнера */
+  margin: 20px auto; /* Центриране на контейнера по хоризонтала */
+  padding: 20px;
+  text-align: center; /* Центриране на текста */
+}
+
+.marathon-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.marathon-container p {
+  font-size: 26px;
+  margin-bottom: 5px;
+}

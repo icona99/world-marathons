@@ -1,0 +1,18 @@
+footer {
+    background-color: #0b336b;
+    color: rgb(0, 0, 0);
+    text-align: right;
+    padding: 25px;
+}
+
+footer a {
+    margin: 0 10px;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+}
+.social{
+    text-align: center;
+} 

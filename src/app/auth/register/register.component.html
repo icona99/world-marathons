@@ -1,0 +1,38 @@
+<div class="fullscreen-background"></div>
+
+<div class="form">
+  <h2>Register</h2>
+  <form [formGroup]="form" class="register" (ngSubmit)="register()">
+    <input formControlName="username" type="text" name="username" id="username" placeholder="Username" required/>
+    <ng-container *ngIf="form.get('username')?.touched">
+      <p class="error" *ngIf="form.get('username')?.errors?.['required']">Username is required!</p>
+      <p class="error" *ngIf="form.get('username')?.errors?.['minlength']">Username must be at least 5 characters!</p>
+    </ng-container>
+
+    <input formControlName="email" type="email" name="email" id="email" placeholder="Email" required/>
+    <ng-container *ngIf="form.get('email')?.touched">
+      <p class="error" *ngIf="form.get('email')?.errors?.['required']">Email is required!</p>
+      <p class="error" *ngIf="form.get('email')?.errors?.['email']">Invalid email</p>
+    </ng-container>
+
+    <div formGroupName="passGroup">
+  
+      <input formControlName="password" type="password" placeholder="Password" />
+      <ng-container *ngIf="form.get('passGroup')?.touched">
+        <p class="error" *ngIf="form.get('passGroup')?.get('password')?.errors?.['required']">Password is required! </p>
+        <p class="error" *ngIf="form.get('passGroup')?.get('password')?.errors?.['minlength']">Password must be at least 8 characters! </p>
+      </ng-container>
+      
+      
+      <input formControlName="repeatPassword" type="password" placeholder="Repeat password" />
+      <ng-container *ngIf="form.get('passGroup')?.get('repeatPassword')?.touched">
+        <p class="error" *ngIf="form.get('passGroup')?.errors?. ['passwordMatchValidator']">Passwords mismatch!</p>
+      </ng-container>
+    </div>
+
+    <button type="submit" [disabled]="form.invalid">Register</button>
+    <p class="message">
+      Have account? <a routerLink="/login">Log in</a>
+    </p>
+  </form>
+</div>

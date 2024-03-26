@@ -1,0 +1,15 @@
+
+<nav>
+    <img src="/assets/1241831.webp" routerLink="/home">
+
+    <ul class="menu">
+        <li><a routerLink="/">Home</a></li>
+        <li *ngIf="!isLoggedIn"><a routerLink="/auth/login">Login</a></li>
+        <li *ngIf="!isLoggedIn"><a routerLink="/auth/register">Register</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="/catalog">Catalog</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="/create">Create</a></li>
+        <!-- <li *ngIf="isLoggedIn"><a routerLink="/registration">Registration</a></li> -->
+        <li *ngIf="isLoggedIn"><a (click)="logout()">Logout</a></li>
+    </ul>
+
+</nav>

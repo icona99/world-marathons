@@ -1,0 +1,29 @@
+
+<div class="fullscreen-background"></div>
+<div class="form">
+  <h2>Login</h2>
+  <form [formGroup]="loginForm" class="login" (ngSubmit)="login()">
+    <input formControlName = "email"type="email" name="email" id="email"placeholder="email" required/>
+    <ng-container *ngIf="loginForm.get('email')?.touched">
+      <p class="error" *ngIf="loginForm.get('email')?.errors?.['required']">Email required!</p>
+      <p class="error" *ngIf="loginForm.get('email')?.errors?.['email']">Invalid email</p>
+
+    </ng-container>
+     <input formControlName = "password" type="password" name="password" id="password" placeholder="password" required/>
+     <ng-container *ngIf="loginForm.get('password')?.touched">
+      <p class="error" *ngIf="loginForm.get('password')?.errors?.['required']">Password required!</p>
+      <p class="error" *ngIf="loginForm.get('password')?.errors?.['minlength']">Password too short!</p>
+    </ng-container>
+    <button type="submit"
+     [disabled]="loginForm.invalid"
+     >Login</button>
+    <p class="message">
+      Not registered? <a routerLink="/register">Create account</a>
+    </p>
+  </form>
+</div>
+
+
+<!-- <div class="error-page">
+  <div class="try-again">Error: Try again?</div>
+</div> -->

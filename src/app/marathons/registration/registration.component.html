@@ -1,0 +1,44 @@
+<div class="fullscreen-background"></div>
+<div class="form">
+    <h2>Marathon Registration</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="register()">
+      <label for="name">First name:</label>
+      <input formControlName="firstName" type="text" placeholder="First Name" required/>
+      <ng-container *ngIf="registrationForm.get('firstName')?.touched">
+        <p class="error" *ngIf="registrationForm.get('firstName')?.errors?.['required']">First name  is required!</p>
+      </ng-container>
+      <label for="name">Last name:</label>
+      <input formControlName="lastName" type="text" placeholder="Last Name" required/>
+      <ng-container *ngIf="registrationForm.get('lastName')?.touched">
+        <p class="error" *ngIf="registrationForm.get('lastName')?.errors?.['required']">Last name is required!</p>
+      </ng-container>
+      <label for="name">Date of birth:</label>
+      <input formControlName="dob" type="date" placeholder="Date of Birth" required/>
+      <ng-container *ngIf="registrationForm.get('dob')?.touched">
+        <p class="error" *ngIf="registrationForm.get('dob')?.errors?.['required']">Date of birth  is required!</p>
+      </ng-container>
+      <label for="name">Gender:</label>
+      <select formControlName="gender" required>
+        <ng-container *ngIf="registrationForm.get('gender')?.touched">
+          <p class="error" *ngIf="registrationForm.get('gender')?.errors?.['required']">Gender  is required!</p>
+        </ng-container>
+        <option value="" disabled selected>Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <label for="name">Distance:</label>
+      <select formControlName="raceDistance" required>
+        <ng-container *ngIf="registrationForm.get('distance')?.touched">
+          <p class="error" *ngIf="registrationForm.get('distance')?.errors?.['required']">Last name is required!</p>
+        </ng-container>
+        <option value="" disabled selected>Select Race Distance</option>
+        <option value="5k">5K</option>
+        <option value="10k">10K</option>
+        <option value="half-marathon">Half Marathon</option>
+        <option value="marathon">Marathon</option>
+      </select>
+      <button type="submit" [disabled]="registrationForm.invalid">Register</button>
+    </form>
+  </div>
+  

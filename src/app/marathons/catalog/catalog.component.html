@@ -1,0 +1,8 @@
+<div *ngFor="let marathon of marathons">
+  <div class="marathon-container">
+    <img [src]="marathon.image" alt="image">
+    <h2>{{ marathon.name }}</h2>
+    <p><strong>Location:</strong> {{ marathon.location }}</p>
+    <p><strong>Date:</strong> {{ marathon.date }}</p>
+    <p><strong>Description:</strong> {{ marathon.description }}</p>
+  </div>
