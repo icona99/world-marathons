@@ -10,15 +10,14 @@ import { Marathon } from '../types/Marathon';
 })
 export class MarathonsService {
 
+
   private apiUrl = `${environment.apiUrl}`;
   private marathonsSubject = new BehaviorSubject<Marathon[]>([]);
 
   constructor(private http: HttpClient) { }
 
   create(name: string, location: string, image: string, date: string, description: string) {
-
     return this.http.post<Marathon>(`${this.apiUrl}/data/:marathons`, { name, location, image, date, description })
-
   }
 
   getAllMarathons(): Observable<Marathon[]> {
@@ -32,6 +31,11 @@ export class MarathonsService {
   getMarathonById(id: string): Observable<Marathon> {
     return this.http.get<Marathon>(`${this.apiUrl}/data/:marathons/${id}`);
   }
+
+  deleteMarathon(id: string): Observable<Marathon> {
+    return this.http.delete<Marathon>(`${this.apiUrl}/data/:marathons/${id}`);
+  }
+
 }
 
 

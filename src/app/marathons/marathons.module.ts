@@ -6,6 +6,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { CreateComponent } from './create/create.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { DetailsComponent } from './details/details.component';
+import { SharedModule } from '../shared/shared.module';
+
 
 
 
@@ -15,15 +17,14 @@ import { DetailsComponent } from './details/details.component';
    RegistrationComponent,
     CreateComponent,
     CatalogComponent,
-    DetailsComponent
-    
-
+    DetailsComponent,
   ],
   imports: [
     CommonModule,
     MarathonsRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
 })
 export class MarathonsModule { }

@@ -1,18 +1,24 @@
+<div class="fullscreen-background"></div>
 <div class="details-container" *ngIf="marathon">
     <h2>{{ marathon.name }}</h2>
+     <div class="detail-image">
+            <img [src]="marathon.image" alt="{{ marathon.name }}" *ngIf="marathon.image">
+        </div>
     <div class="detail-info">
         <div class="detail-section">
             <p><strong>Location:</strong> {{ marathon.location }}</p>
             <p><strong>Date:</strong> {{ marathon.date }}</p>
-            <p><strong>Description:</strong> {{ marathon.description }}</p>
-        </div>
-        <div class="detail-image">
-            <img [src]="marathon.image" alt="{{ marathon.name }}" *ngIf="marathon.image">
+            <p><strong>Description:</strong> {{ marathon.description | cutText : 60 }}
+                <span *ngIf="marathon.description.length > 60">
+                    <button class="read-more-btn" (click)="toggleDescription()">{{ showFullDesc ? 'Show Less' : 'Read More' }}</button>
+                </span>
+            </p>
+            <p *ngIf="showFullDesc">{{ marathon.description }}</p>
         </div>
     </div>
     <div class="button-container">
         <button class="edit-btn">Edit</button>
-        <button class="delete-btn">Delete</button>
+        <button class="delete-btn" [disabled]="!marathonId" (click)="deleteMarathon()">Delete</button>
         <button class="signup-btn">Sign Up</button>
     </div>
 </div>
