@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
 import { CreateComponent } from './create/create.component';
 import { CatalogComponent } from './catalog/catalog.component';
+import { DetailsComponent } from './details/details.component';
 
 
 
@@ -13,7 +14,8 @@ import { CatalogComponent } from './catalog/catalog.component';
   declarations: [
    RegistrationComponent,
     CreateComponent,
-    CatalogComponent
+    CatalogComponent,
+    DetailsComponent
     
 
   ],

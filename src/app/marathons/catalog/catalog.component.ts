@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MarathonsService } from '../marathons.service';
 import { Marathon } from 'src/app/types/Marathon';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -11,7 +13,7 @@ import { Marathon } from 'src/app/types/Marathon';
 export class CatalogComponent implements OnInit {
   marathons: Marathon[] = [];
 
-  constructor(private marathonsService: MarathonsService) { }
+  constructor(private marathonsService: MarathonsService,private router:Router) { }
 
   ngOnInit(): void {
     this.fetchMarathons();
@@ -27,4 +29,7 @@ export class CatalogComponent implements OnInit {
       }
     );
   }
+  showDetails(marathonId: string): void {
+    this.router.navigate(['/details', marathonId]);
+}
 }

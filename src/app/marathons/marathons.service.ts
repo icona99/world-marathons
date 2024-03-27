@@ -17,7 +17,7 @@ export class MarathonsService {
 
   create(name: string, location: string, image: string, date: string, description: string) {
 
-    return this.http.post<{ name: string, location: string, image: string, date: string, description: string }>(`${this.apiUrl}/data/:marathons`, { name, location, image, date, description })
+    return this.http.post<Marathon>(`${this.apiUrl}/data/:marathons`, { name, location, image, date, description })
 
   }
 
@@ -27,6 +27,10 @@ export class MarathonsService {
       error: error => console.error('Error fetching marathons:', error)
     });
     return this.marathonsSubject.asObservable();
+  }
+
+  getMarathonById(id: string): Observable<Marathon> {
+    return this.http.get<Marathon>(`${this.apiUrl}/data/:marathons/${id}`);
   }
 }
 
