@@ -1,7 +1,7 @@
 <div class="fullscreen-background"></div>
 <div class="form">
     <h2>Marathon Registration</h2>
-    <form [formGroup]="registrationForm" (ngSubmit)="register()">
+    <form [formGroup]="registrationForm" (ngSubmit)="registration()">
       <label for="name">First name:</label>
       <input formControlName="firstName" type="text" placeholder="First Name" required/>
       <ng-container *ngIf="registrationForm.get('firstName')?.touched">
@@ -38,7 +38,7 @@
         <option value="half-marathon">Half Marathon</option>
         <option value="marathon">Marathon</option>
       </select>
-      <button type="submit" [disabled]="registrationForm.invalid">Register</button>
+      <button type="submit">Register</button>
     </form>
   </div>
   

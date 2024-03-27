@@ -5,4 +5,5 @@ export interface Marathon{
     image:string,
     date:string,
     description:string,
+    registeredCount:number
 }

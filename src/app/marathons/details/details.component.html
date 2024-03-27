@@ -14,12 +14,13 @@
                 </span>
             </p>
             <p *ngIf="showFullDesc">{{ marathon.description }}</p>
+            <p><strong>Registered Count:</strong> {{ marathon.registeredCount }}</p>
         </div>
     </div>
     <div class="button-container">
         <button class="edit-btn">Edit</button>
         <button class="delete-btn" [disabled]="!marathonId" (click)="deleteMarathon()">Delete</button>
-        <button class="signup-btn">Sign Up</button>
+        <button class="signup-btn" routerLink="/registration">>Sign Up</button>
     </div>
 </div>
 

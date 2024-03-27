@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Marathon } from '../types/Marathon';
 
@@ -36,7 +36,20 @@ export class MarathonsService {
     return this.http.delete<Marathon>(`${this.apiUrl}/data/:marathons/${id}`);
   }
 
+  // registration(registrationData: any): Observable<Marathon> {
+  //   // Изпращане на POST заявка към съответния API endpoint за регистрация
+  //   return this.http.post<Marathon>(`${this.apiUrl}/data/:marathons`, registrationData);
+  // }
+
+  updateMarathonData(id: string, updatedData: Partial<Marathon>): Observable<Marathon> {
+    // Увеличаване на броя на регистрираните лица
+    updatedData.registeredCount = updatedData.registeredCount ? updatedData.registeredCount + 1 : 1;
+    
+    return this.http.patch<Marathon>(`${this.apiUrl}/data/:marathons/:${id}`, updatedData);
+  }
+  
 }
+
 
 
 
