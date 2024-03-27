@@ -36,16 +36,18 @@ export class MarathonsService {
     return this.http.delete<Marathon>(`${this.apiUrl}/data/:marathons/${id}`);
   }
 
-  // registration(registrationData: any): Observable<Marathon> {
-  //   // Изпращане на POST заявка към съответния API endpoint за регистрация
-  //   return this.http.post<Marathon>(`${this.apiUrl}/data/:marathons`, registrationData);
+  
+
+  // updateMarathonData(id: string, updatedData: Partial<Marathon>): Observable<Marathon> {
+   
+  //   updatedData.registeredCount = updatedData.registeredCount ? updatedData.registeredCount + 1 : 1;
+    
+  //   return this.http.patch<Marathon>(`${this.apiUrl}/data/:marathons/:${id}`, updatedData);
   // }
 
-  updateMarathonData(id: string, updatedData: Partial<Marathon>): Observable<Marathon> {
-    // Увеличаване на броя на регистрираните лица
-    updatedData.registeredCount = updatedData.registeredCount ? updatedData.registeredCount + 1 : 1;
-    
-    return this.http.patch<Marathon>(`${this.apiUrl}/data/:marathons/:${id}`, updatedData);
+  editMarathon(marathon: Marathon): Observable<Marathon> {
+    const editUrl = `${this.apiUrl}/data/:marathons/${marathon._id}`; 
+    return this.http.put<Marathon>(editUrl, marathon);
   }
   
 }

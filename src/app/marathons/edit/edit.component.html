@@ -1,0 +1,28 @@
+<div class="fullscreen-background"></div>
+<div class="edit-container" *ngIf="marathon">
+    <h2>{{ marathon.name }}</h2>
+    <div class="edit-image">
+        <img [src]="marathon.image" alt="{{ marathon.name }}" *ngIf="marathon.image">
+    </div>
+    <div class="edit-info">
+        <div class="edit-section">
+            <p><strong>Location:</strong> 
+                <input type="text" [(ngModel)]="marathon.location" name="location">
+            </p>
+            <p><strong>Date:</strong> 
+                <input type="text" [(ngModel)]="marathon.date" name="date">
+            </p>
+            <p><strong>Description:</strong> 
+                <textarea [(ngModel)]="marathon.description" name="description"></textarea>
+            </p>
+            <p><strong>Registered Count:</strong> 
+                <input type="text" [(ngModel)]="marathon.registeredCount" name="registeredCount">
+            </p>
+        </div>
+    </div>
+    <div class="button-container">
+        <button class="edit-btn" (click)="saveChanges()">Save changes</button>
+    </div>
+</div>
+
+<!-- (click)="editMarathon(marathon)"deleteMarathon(marathon) -->

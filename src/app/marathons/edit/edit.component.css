@@ -1,0 +1,79 @@
+.edit-container {
+    position: relative;
+    top: -90px; /* Променете стойността според вашите предпочитания */
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: rgba(240, 240, 240, 0.2);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden; /* Премахва скролирането */
+}
+
+.edit-container h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.edit-info {
+    background-color: rgba(240, 240, 240, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.edit-section {
+    margin-bottom: 15px;
+}
+
+.edit-section p {
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.edit-section input[type="text"],
+.edit-section textarea {
+    width: calc(100% - 32px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.edit-image {
+    display: flex;
+    justify-content: center; /* Центрира снимката хоризонтално */
+    align-items: center; /* Центрира снимката вертикално */
+}
+
+.edit-image img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 5px;
+}
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 8px 26px;
+    margin: 0 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px; /* Увеличете размера на буквите */
+}
+
+
+.button-container button:hover {
+    background-color: #0056b3;
+}

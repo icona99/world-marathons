@@ -12,43 +12,40 @@ import { CutTextPipe } from 'src/app/shared/pipes/cut-text.pipe';
 export class DetailsComponent implements OnInit {
   marathonId: string | undefined;
   marathon: Marathon | undefined;
-  showFullDesc: boolean=false;
+  showFullDesc: boolean = false;
 
-  constructor(private route: ActivatedRoute, private marathonsService: MarathonsService,private router:Router) { }
+  constructor(private route: ActivatedRoute, private marathonsService: MarathonsService, private router: Router) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     if (id !== null) {
       this.marathonId = id;
-      // Вземете данните за маратона с ID this.marathonId от сервиса
       this.marathonsService.getMarathonById(this.marathonId).subscribe((marathon: Marathon) => {
         this.marathon = marathon
-        // Използвайте данните за маратона в шаблона
       });
     }
-};
+  };
 
-deleteMarathon(): void {
-  if (this.marathonId) {
+  deleteMarathon(): void {
+    if (this.marathonId) {
       if (confirm('Are you sure you want to delete this marathon?')) {
-          this.marathonsService.deleteMarathon(this.marathonId).subscribe(
-              () => {
-                  this.router.navigate(['/catalog']);
-              },
-              (error) => {
-                  console.error('Error deleting marathon:', error);
-              }
-          );
+        this.marathonsService.deleteMarathon(this.marathonId).subscribe(
+          () => {
+            this.router.navigate(['/catalog']);
+          },
+          (error) => {
+            console.error('Error deleting marathon:', error);
+          }
+        );
       }
-  } else {
+    } else {
       console.error('Marathon ID is undefined');
+    }
+  };
+
+  toggleDescription(): void {
+    this.showFullDesc = !this.showFullDesc;
   }
-};
-
-toggleDescription(): void {
-  this.showFullDesc = !this.showFullDesc;
-}
-
 
 }
 

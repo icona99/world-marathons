@@ -4,11 +4,13 @@ import { RegistrationComponent } from "./registration/registration.component";
 import { CreateComponent } from "./create/create.component";
 import { CatalogComponent } from "./catalog/catalog.component"
 import { DetailsComponent } from "./details/details.component";
+import { EditComponent } from "./edit/edit.component";
 
 const routes: Routes = [{ path: 'catalog', component: CatalogComponent },
 { path: 'create', component: CreateComponent },
-{path:'details/:id',component:DetailsComponent},
-{ path: 'registration', component: RegistrationComponent }]
+{ path: 'details/:id', component: DetailsComponent },
+{ path: 'registration', component: RegistrationComponent },
+{ path: 'edit/:id', component: EditComponent }]
 
 
 @NgModule({

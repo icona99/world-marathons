@@ -1,72 +1,50 @@
 .details-container {
-    width: 90%;
-    max-width: 600px; /* Променете според вашите предпочитания */
+    width: 95%; /* Увеличете ширината на формата */
+    max-width: 800px; /* Променете според вашите предпочитания */
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px; /* Увеличете padding-а за по-добър външен вид */
     background-color: rgba(162, 162, 162, 0.3);
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box; /* Уверете се, че padding-ът се включва в общата ширина */
-    overflow: hidden; /* Предотвратете появата на скрол */
-    text-align: center; /* Центрирайте текста */
+    border: 2px solid #ccc; /* Увеличете дебелината на границата */
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
 }
 
 .details-container h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.detail-info {
-    display: flex;
-    flex-wrap: wrap; /* Опция, която разрешава елементите да се превключват на нов ред */
-    align-items: center; /* Центрирайте елементите по хоризонтала */
-}
-
-.detail-section {
-    flex-basis: 100%; /* За да заеме цялата ширина на родителя */
-    margin-bottom: 10px; /* Добавете малко разстояние между секциите */
+    font-size: 32px; /* Увеличете размера на заглавието */
+    margin-bottom: 20px; /* Увеличете разстоянието под заглавието */
 }
 
 .detail-image img {
-    max-width: 200px;
-    height: auto;
-    border-radius: 5px;
+    max-width: 300px; /* Увеличете максималната ширина на изображението */
+    max-height: 200px; /* Увеличете максималната височина на изображението */
+    border-radius: 10px; /* Увеличете радиуса на закръгленията */
 }
 
 .button-container {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px; /* Увеличете разстоянието над бутоните */
 }
 
 .button-container button {
-    padding: 10px 20px;
-    margin: 0 10px;
+    padding: 15px 30px; /* Увеличете размера на padding-а на бутона */
+    margin: 0 15px; 
     border: none;
-    border-radius: 5px;
+    border-radius: 8px; 
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 18px; /* Увеличете размера на шрифта на бутона */
 }
 
 .button-container button:hover {
     background-color: #0056b3;
 }
+
 .details-container p {
-    font-size: 16px; /* Променете според вашите предпочитания */
-    line-height: 1.5; /* Променете според вашите предпочитания */
-}
-
-.read-more-btn {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.read-more-btn:hover {
-    background-color: #0056b3;
+    font-size: 28px; /* Увеличете размера на текста */
+    line-height: 1.6; /* Увеличете линейния интервал */
+    margin-bottom: 15px; /* Увеличете разстоянието под абзаците */
 }
