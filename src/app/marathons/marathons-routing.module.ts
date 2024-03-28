@@ -1,6 +1,5 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { RegistrationComponent } from "./registration/registration.component";
 import { CreateComponent } from "./create/create.component";
 import { CatalogComponent } from "./catalog/catalog.component"
 import { DetailsComponent } from "./details/details.component";
@@ -10,7 +9,6 @@ import { AuthGuard } from "../auth.guard";
 const routes: Routes = [{ path: 'catalog', component: CatalogComponent,canActivate: [AuthGuard] },
 { path: 'create', component: CreateComponent,canActivate: [AuthGuard] },
 { path: 'details/:id', component: DetailsComponent,canActivate: [AuthGuard]  },
-{ path: 'registration', component: RegistrationComponent,canActivate: [AuthGuard] },
 { path: 'edit/:id', component: EditComponent,canActivate: [AuthGuard]  }]
 
 
