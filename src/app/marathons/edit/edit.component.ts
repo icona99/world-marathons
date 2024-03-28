@@ -26,7 +26,7 @@ export class EditComponent implements OnInit {
   saveChanges(): void {
     if (this.marathon) {
       this.marathonsService.editMarathon(this.marathon).subscribe((editedMarathon: Marathon) => {
-        this.router.navigate(['/details', this.marathon?._id]); // Редирект до страницата за детайли
+        this.router.navigate(['/marathons/details', this.marathon?._id]); // Редирект до страницата за детайли
       }, (error: any) => {
         console.error( error);
       });

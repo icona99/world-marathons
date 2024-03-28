@@ -1,6 +1,6 @@
 .details-container {
     width: 95%; /* Увеличете ширината на формата */
-    max-width: 800px; /* Променете според вашите предпочитания */
+    max-width: 700px; /* Променете според вашите предпочитания */
     margin: 0 auto;
     padding: 30px; /* Увеличете padding-а за по-добър външен вид */
     background-color: rgba(162, 162, 162, 0.3);
@@ -47,4 +47,21 @@
     font-size: 28px; /* Увеличете размера на текста */
     line-height: 1.6; /* Увеличете линейния интервал */
     margin-bottom: 15px; /* Увеличете разстоянието под абзаците */
+}
+.read-more-btn {
+  background-color: #008cff; /* Син цвят */
+  color: #fff; /* Бял цвят на текста */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #02448b; /* По-тъмно син цвят при ховър */
+}
+
+.read-more-btn:focus {
+  outline: none; /* Премахване на контура при фокус */
 }

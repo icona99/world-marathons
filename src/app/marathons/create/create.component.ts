@@ -21,7 +21,7 @@ export class CreateComponent {
     this.marathonsService.create(name, location, image, date, description)
         .subscribe((createdMarathon: Marathon) => {
             // При успешно създаване на маратона, пренасочете потребителя към страницата за детайли с използването на _id
-            this.router.navigate(['/details', createdMarathon._id]);
+            this.router.navigate(['/catalog']);
             form.reset();
         });
 }

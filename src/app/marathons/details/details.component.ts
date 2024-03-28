@@ -31,7 +31,7 @@ export class DetailsComponent implements OnInit {
       if (confirm('Are you sure you want to delete this marathon?')) {
         this.marathonsService.deleteMarathon(this.marathonId).subscribe(
           () => {
-            this.router.navigate(['/catalog']);
+            this.router.navigate(['/marathons/catalog']);
           },
           (error) => {
             console.error('Error deleting marathon:', error);

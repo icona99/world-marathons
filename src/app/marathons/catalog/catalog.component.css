@@ -6,7 +6,7 @@
 
 /* Стилове за всяка карта на маратон */
 .marathon-card {
-  background-color: #027efa;
+  background-color:  rgba(131, 133, 136, 0.5);
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 400px;
@@ -38,7 +38,7 @@
 
 /* Стилове за бутона "Details" */
 .marathon-card button {
-  background-color: #027efa;
+  background-color: #0159b1 ;
   border: none;
   color: #fff;
   padding: 12px 24px;

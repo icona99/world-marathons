@@ -47,7 +47,7 @@ registration() {
     this.marathon.registeredCount++; 
 
     // След успешна регистрация, навигирайте към детайлната страница на маратона
-    this.router.navigate(['/details' ,this.marathon._id]);
+    this.router.navigate(['/marathons/details' ,this.marathon._id]);
   } else {
     console.error('No valid marathon found for registration.');
   }

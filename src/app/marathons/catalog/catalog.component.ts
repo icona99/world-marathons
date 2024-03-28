@@ -30,6 +30,6 @@ export class CatalogComponent implements OnInit {
     );
   }
   showDetails(marathonId: string): void {
-    this.router.navigate(['/details', marathonId]);
+    this.router.navigate(['/marathons/details', marathonId]);
 }
 }
