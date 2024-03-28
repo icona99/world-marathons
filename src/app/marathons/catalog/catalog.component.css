@@ -6,6 +6,7 @@
 
 /* Стилове за всяка карта на маратон */
 .marathon-card {
+  position: relative; /* Добавете този ред */
   background-color:  rgba(131, 133, 136, 0.5);
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -33,20 +34,28 @@
 
 .marathon-card p {
   margin-bottom: 10px;
-  color: #fff; /* Цвят на текста */
+  color: #fff;
+  overflow: hidden; /* Ограничаване на препълването на текста */
+  max-height: 100px; /* Максимална височина на текста */
+  text-overflow: ellipsis; /* Добавяне на многоточие, ако текстът е препълнен */
+  white-space: nowrap; /* Предотвратяване на преноса на текста на нов ред */
 }
 
 /* Стилове за бутона "Details" */
 .marathon-card button {
-  background-color: #0159b1 ;
+  position: absolute; /* Променен стил за абсолютно позициониране */
+  bottom: 20px; /* Разстояние от долния край на картона */
+  left: 50%; /* Позиция на центъра на картона */
+  transform: translateX(-50%); /* Центриране на бутона спрямо картона */
+  background-color: #0159b1;
   border: none;
   color: #fff;
   padding: 12px 24px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  font-family: 'Roboto', sans-serif; /* Пример за използване на шрифт */
-  font-size: 16px; /* Размер на шрифта */
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
 
 .marathon-card button:hover {
