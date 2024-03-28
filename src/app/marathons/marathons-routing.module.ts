@@ -6,10 +6,10 @@ import { DetailsComponent } from "./details/details.component";
 import { EditComponent } from "./edit/edit.component";
 import { AuthGuard } from "../auth.guard";
 
-const routes: Routes = [{ path: 'catalog', component: CatalogComponent,canActivate: [AuthGuard] },
-{ path: 'create', component: CreateComponent,canActivate: [AuthGuard] },
-{ path: 'details/:id', component: DetailsComponent,canActivate: [AuthGuard]  },
-{ path: 'edit/:id', component: EditComponent,canActivate: [AuthGuard]  }]
+const routes: Routes = [{ path: 'catalog', component: CatalogComponent},
+{ path: 'create', component: CreateComponent, },
+{ path: 'details/:id', component: DetailsComponent },
+{ path: 'edit/:id', component: EditComponent  }]
 
 
 @NgModule({

@@ -1,26 +1,11 @@
-<section id="catalog">
-    <!-- <h1>All Shoes</h1>
-    <div class="band">
-
-       
-        
-
-        <div class="flip flip-vertical">
-            <div class="front">
-                <img src="/img/adidas-adizero-adios-pro-evo-1-mediasuela-800x800x80.jpg"
-                    alt="ADIZERO ADIOS PRO EVO 1">
-            </div>
-            <div class="back">
-                <h1>ADIZERO ADIOS PRO EVO 1</h1>
-                <h2>Brand: Adidas</h2>
-                <h3>Type: Racing</h3>
-                <p>Description:Astonishingly light. Shamelessly fast. The adidas Adizero Adios Pro Evo 1 is a new class of race shoe, designed to help ambitious marathon runners leave it all on the course. It's 40% lighter than any race shoe we've created, weighing in at just 4.87 ounces of pure innovation. Lightstrike Pro foam is paired with cutting-edge outsole technology, featherlight mesh and a first-of-its-kind forefoot rocker that's lab-tested to improve running economy. A one-race super tool made to last you through familiarization time to finish line, the Adizero Adios Pro Evo 1 is the future of running, and it's ready to race</p>
-                <a href="#" class="details">Details</a>
-            </div>
-        </div>
-         <div class="no-posts">
-            <p class="no-offer">There are no posts yet...</p>
-        </div>
-        
-    </div> -->
-</section>
+<div class="fullscreen-background"></div>
+<div class="marathon-container">
+<div class="marathon-card" *ngFor="let marathon of marathons">
+  
+    <img [src]="marathon.image" alt="image">
+    <h2>{{ marathon.name }}</h2>
+    <p><strong>Location:</strong> {{ marathon.location }}</p>
+    <p><strong>Date:</strong> {{ marathon.date }}</p>
+    <!-- <p><strong>Description:</strong> {{ marathon.description }}</p> -->
+  </div>
+</div>
