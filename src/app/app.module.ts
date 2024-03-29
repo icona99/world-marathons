@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HomeComponent } from './home/home.component';
-import { ErrorComponent } from './error/error.component';
+import {  NotFoundComponent } from './not-found/notFound.component';
 import { appInterceptorProvider } from './app.intereseptor';
 import { LoaderComponent } from './loader/loader.component';
 
@@ -24,7 +24,7 @@ import { LoaderComponent } from './loader/loader.component';
     AppComponent,
     MainComponent,
     HomeComponent,
-    ErrorComponent,
+NotFoundComponent,
   LoaderComponent
   
   ],
