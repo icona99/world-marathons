@@ -1,1 +1,9 @@
-<p class="error-message">{{errorMessage}}</p>
+<!-- error.component.html -->
+<div class="error-container" *ngIf="errorMessage">
+    <div class="error-message">
+      <p>{{ errorMessage }}</p>
+      <button class="close-button" (click)="closeError()">Close</button>
+    </div>
+  </div>
+  
+  

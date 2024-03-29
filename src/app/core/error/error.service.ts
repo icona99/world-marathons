@@ -1,3 +1,4 @@
+// error.service.ts
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
@@ -5,11 +6,12 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ErrorService {
-  private error$$ = new BehaviorSubject(null);
+  private error$$ = new BehaviorSubject<any>(null);
   public error$ = this.error$$.asObservable();
-  constructor() { }
+
+  constructor() {}
 
   setError(error: any): void {
-    this.error$$.next(error)
+    this.error$$.next(error);
   }
 }

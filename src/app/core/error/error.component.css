@@ -1,3 +1,37 @@
-.error-message{
-    color: red;
+// error.component.scss
+.error-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 0, 0, 0.9); /* Прилагайте цвета, който предпочитате */
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+  animation: fadeOut 5s forwards; /* Анимация за избледняване */
 }
+
+.error-message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-button {
+  background-color: #ffffff; /* Цвят на бутона */
+  color: rgba(255, 0, 0, 0.9); /* Цвят на икона */
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+  
