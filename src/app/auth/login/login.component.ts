@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit{
 
-
+ 
   constructor(private authService: AuthService, private router: Router, private fb: FormBuilder) {}
   loginForm!: FormGroup;
 
@@ -26,21 +26,24 @@ export class LoginComponent implements OnInit{
   
 
   login() {
- 
-    if (this.loginForm.valid) {
-      this.authService.login(this.loginForm.value.email.trim(), this.loginForm.value.password.trim()).subscribe({
-        next: (response)=>{
-          console.log('Login successful', response);
-          this.router.navigate(['/']);
-        },
-        error: (error) => {
-          console.error('Login failed', error);
-       
-        }
-      });
-    }else{
-      console.log('Form is not valid');
+    try {
+      if (this.loginForm.valid) {
+        this.authService.login(this.loginForm.value.email.trim(), this.loginForm.value.password.trim()).subscribe({
+          next: (response)=>{
+            console.log('Login successful', response);
+            this.router.navigate(['/']);
+          },
+          error: (error) => {
+            console.error('Login failed', error);
+          }
+        });
+      } else {
+        console.log('Form is not valid');
+      }
+    } catch (error) {
+      console.error('An error occurred during login', error);
     }
   }
+  
 
 }

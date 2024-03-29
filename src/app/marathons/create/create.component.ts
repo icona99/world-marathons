@@ -15,14 +15,13 @@ export class CreateComponent {
 
   create(form: NgForm) {
     if (form.invalid) {
-        return;
+      return;
     }
     const { name, location, image, date, description } = form.value;
     this.marathonsService.create(name, location, image, date, description)
-        .subscribe((createdMarathon: Marathon) => {
-            // При успешно създаване на маратона, пренасочете потребителя към страницата за детайли с използването на _id
-            this.router.navigate(['/marathons/catalog']);
-            form.reset();
-        });
-}
+      .subscribe((createdMarathon: Marathon) => {
+        this.router.navigate(['/marathons/catalog']);
+        form.reset();
+      });
+  }
 }

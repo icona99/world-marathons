@@ -1,10 +1,10 @@
 .details-container {
-    width: 95%; /* Увеличете ширината на формата */
-    max-width: 700px; /* Променете според вашите предпочитания */
+    width: 95%; 
+    max-width: 700px;
     margin: 0 auto;
-    padding: 30px; /* Увеличете padding-а за по-добър външен вид */
+    padding: 30px; 
     background-color: rgba(162, 162, 162, 0.3);
-    border: 2px solid #ccc; /* Увеличете дебелината на границата */
+    border: 2px solid #ccc; 
     border-radius: 10px;
     box-sizing: border-box;
     overflow: hidden;
@@ -12,23 +12,23 @@
 }
 
 .details-container h2 {
-    font-size: 32px; /* Увеличете размера на заглавието */
-    margin-bottom: 20px; /* Увеличете разстоянието под заглавието */
+    font-size: 32px; 
+    margin-bottom: 20px; 
 }
 
 .detail-image img {
-    max-width: 300px; /* Увеличете максималната ширина на изображението */
-    max-height: 200px; /* Увеличете максималната височина на изображението */
-    border-radius: 10px; /* Увеличете радиуса на закръгленията */
+    max-width: 300px; 
+    max-height: 200px; 
+    border-radius: 10px; 
 }
 
 .button-container {
     text-align: center;
-    margin-top: 30px; /* Увеличете разстоянието над бутоните */
+    margin-top: 30px;
 }
 
 .button-container button {
-    padding: 15px 30px; /* Увеличете размера на padding-а на бутона */
+    padding: 15px 30px; 
     margin: 0 15px; 
     border: none;
     border-radius: 8px; 
@@ -36,7 +36,7 @@
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 18px; /* Увеличете размера на шрифта на бутона */
+    font-size: 18px;
 }
 
 .button-container button:hover {
@@ -44,13 +44,13 @@
 }
 
 .details-container p {
-    font-size: 28px; /* Увеличете размера на текста */
-    line-height: 1.6; /* Увеличете линейния интервал */
-    margin-bottom: 15px; /* Увеличете разстоянието под абзаците */
+    font-size: 28px; 
+    line-height: 1.6; 
+    margin-bottom: 15px; 
 }
 .read-more-btn {
-  background-color: #008cff; /* Син цвят */
-  color: #fff; /* Бял цвят на текста */
+  background-color: #008cff; 
+  color: #fff; 
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
@@ -59,9 +59,9 @@
 }
 
 .read-more-btn:hover {
-  background-color: #02448b; /* По-тъмно син цвят при ховър */
+  background-color: #02448b; 
 }
 
 .read-more-btn:focus {
-  outline: none; /* Премахване на контура при фокус */
+  outline: none; 
 }

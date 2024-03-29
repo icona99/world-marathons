@@ -12,7 +12,6 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 import { appInterceptorProvider } from './app.intereseptor';
-import { AuthenticateComponent } from './authenticate/authenticate.component';
 import { LoaderComponent } from './loader/loader.component';
 
 
@@ -24,7 +23,6 @@ import { LoaderComponent } from './loader/loader.component';
     MainComponent,
     HomeComponent,
     ErrorComponent,
-    AuthenticateComponent,
     LoaderComponent
   ],
   imports: [

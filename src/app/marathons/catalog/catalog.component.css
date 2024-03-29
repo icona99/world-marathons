@@ -1,12 +1,12 @@
 .marathon-container {
-  display: flex; /* Използване на Flexbox */
-  justify-content: center; /* Центриране на елементите по хоризонтала */
-  align-items: center; /* Центриране на елементите по вертикала */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
 
-/* Стилове за всяка карта на маратон */
+
 .marathon-card {
-  position: relative; /* Добавете този ред */
+  position: relative; 
   background-color:  rgba(131, 133, 136, 0.5);
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -17,36 +17,40 @@
   text-align: center;
   overflow: hidden;
 }
-
-.marathon-card img {
-  width: 100px; /* Фиксирана ширина */
-  height: 100px; /* Фиксирана височина */
-  object-fit: cover; /* Запазване на съотношението на страните и запълване на целия контейнер */
-  border-radius: 10px; /* Стъргълва ъглите на снимката да съвпаднат с картона */
+.marathon-card:hover {
+  display: block; 
+  background-color: #0159b1;
 }
 
-/* Стилове за текста в картона */
+.marathon-card img {
+  width: 100px;
+  height: 100px; 
+  object-fit: cover; 
+  border-radius: 10px; 
+}
+
+
 .marathon-card h2 {
   margin-bottom: 10px;
   font-size: 1.5rem;
-  color: #fff; /* Цвят на текста */
+  color: #fff; 
 }
 
 .marathon-card p {
   margin-bottom: 10px;
   color: #fff;
-  overflow: hidden; /* Ограничаване на препълването на текста */
-  max-height: 100px; /* Максимална височина на текста */
-  text-overflow: ellipsis; /* Добавяне на многоточие, ако текстът е препълнен */
-  white-space: nowrap; /* Предотвратяване на преноса на текста на нов ред */
+  overflow: hidden; 
+  max-height: 100px; 
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
 }
 
-/* Стилове за бутона "Details" */
+
 .marathon-card button {
-  position: absolute; /* Променен стил за абсолютно позициониране */
-  bottom: 20px; /* Разстояние от долния край на картона */
-  left: 50%; /* Позиция на центъра на картона */
-  transform: translateX(-50%); /* Центриране на бутона спрямо картона */
+  position: absolute; 
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
   background-color: #0159b1;
   border: none;
   color: #fff;
@@ -59,10 +63,10 @@
 }
 
 .marathon-card button:hover {
-  background-color: #0256a6; /* По-тъмна версия на основния цвят при хостване */
+  background-color: #0256a6; 
 }
 
-/* Допълнителни стилове за анимация при натискане на бутона */
+
 .marathon-card button:active {
   transform: translateY(2px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

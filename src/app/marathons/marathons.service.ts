@@ -17,11 +17,11 @@ export class MarathonsService {
   constructor(private http: HttpClient) { }
 
   create(name: string, location: string, image: string, date: string, description: string) {
-    return this.http.post<Marathon>(`${this.apiUrl}/data/:marathons`, { name, location, image, date, description })
+    return this.http.post<Marathon>(`${this.apiUrl}/data/marathons`, { name, location, image, date, description })
   }
 
   getAllMarathons(): Observable<Marathon[]> {
-    this.http.get<Marathon[]>(`${this.apiUrl}/data/:marathons`).subscribe({
+    this.http.get<Marathon[]>(`${this.apiUrl}/data/marathons`).subscribe({
       next: marathons => this.marathonsSubject.next(marathons),
       error: error => console.error('Error fetching marathons:', error)
     });
@@ -29,11 +29,11 @@ export class MarathonsService {
   }
 
   getMarathonById(id: string): Observable<Marathon> {
-    return this.http.get<Marathon>(`${this.apiUrl}/data/:marathons/${id}`);
+    return this.http.get<Marathon>(`${this.apiUrl}/data/marathons/${id}`);
   }
 
   deleteMarathon(id: string): Observable<Marathon> {
-    return this.http.delete<Marathon>(`${this.apiUrl}/data/:marathons/${id}`);
+    return this.http.delete<Marathon>(`${this.apiUrl}/data/marathons/${id}`);
   }
 
   
@@ -46,7 +46,7 @@ export class MarathonsService {
   // }
 
   editMarathon(marathon: Marathon): Observable<Marathon> {
-    const editUrl = `${this.apiUrl}/data/:marathons/${marathon._id}`; 
+    const editUrl = `${this.apiUrl}/data/marathons/${marathon._id}`; 
     return this.http.put<Marathon>(editUrl, marathon);
   }
   

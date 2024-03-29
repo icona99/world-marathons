@@ -1,6 +1,6 @@
 .edit-container {
     position: relative;
-    top: -90px; /* Променете стойността според вашите предпочитания */
+    top: -90px; 
     max-width: 600px;
     margin: 0 auto;
     padding: 15px;
@@ -8,7 +8,7 @@
     border: 1px solid #ddd;
     border-radius: 10px;
     box-sizing: border-box;
-    overflow: hidden; /* Премахва скролирането */
+    overflow: hidden; 
 }
 
 .edit-container h2 {
@@ -47,8 +47,8 @@
 
 .edit-image {
     display: flex;
-    justify-content: center; /* Центрира снимката хоризонтално */
-    align-items: center; /* Центрира снимката вертикално */
+    justify-content: center; 
+    align-items: center; 
 }
 
 .edit-image img {
@@ -70,7 +70,7 @@
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 16px; /* Увеличете размера на буквите */
+    font-size: 16px; 
 }
 
 

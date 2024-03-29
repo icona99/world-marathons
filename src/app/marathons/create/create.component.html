@@ -1,11 +1,8 @@
-
 <div class="fullscreen-background"></div>
 <section id="create-page">
     <div class="createSection">
         <div class="info">
-            <!-- Add any additional information or content here -->
         </div>
-
         <form class="createForm" #form="ngForm" (ngSubmit)="create(form)">
             <h2>Add Race</h2>
             <ul class="noBullet">
@@ -31,16 +28,16 @@
                 </li>
                 <li>
                     <label for="image">Image:</label>
-                    <input type="text" class="inputFields" id="image" name="image"
-                        #inputImage="ngModel" ngModel required />
+                    <input type="text" class="inputFields" id="image" name="image" #inputImage="ngModel" ngModel
+                        required />
                     <ng-container *ngIf="inputImage.touched">
                         <p class="error" *ngIf="inputImage?.errors?.['required']">Image is required!</p>
                     </ng-container>
                 </li>
                 <li>
                     <label for="date">Date:</label>
-                    <input type="date" class="inputFields" id="date" name="date" #inputDate="ngModel" ngModel required
-                       />
+                    <input type="date" class="inputFields" id="date" name="date" #inputDate="ngModel" ngModel
+                        required />
                     <ng-container *ngIf="inputDate.touched">
                         <p class="error" *ngIf="inputDate?.errors?.['required']">Date is required!</p>
                     </ng-container>

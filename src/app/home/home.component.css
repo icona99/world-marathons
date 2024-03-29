@@ -1,10 +1,10 @@
 .marathon-container {
-    display: flex; /* Използване на Flexbox */
-    justify-content: center; /* Центриране на елементите по хоризонтала */
-    align-items: center; /* Центриране на елементите по вертикала */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
   }
   
-  /* Стилове за всяка карта на маратон */
+
   .marathon-card {
     background-color:  rgba(131, 133, 136, 0.5);
     border-radius: 10px;
@@ -15,28 +15,33 @@
     padding: 20px;
     text-align: center;
     overflow: hidden;
+    position: relative;
+  }
+  .marathon-card:hover {
+    display: block; 
+    background-color: #0159b1;
   }
   
   .marathon-card img {
-    width: 100px; /* Фиксирана ширина */
-    height: 100px; /* Фиксирана височина */
-    object-fit: cover; /* Запазване на съотношението на страните и запълване на целия контейнер */
-    border-radius: 10px; /* Стъргълва ъглите на снимката да съвпаднат с картона */
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 10px; 
   }
   
-  /* Стилове за текста в картона */
+  
   .marathon-card h2 {
     margin-bottom: 10px;
     font-size: 1.5rem;
-    color: #fff; /* Цвят на текста */
+    color: #fff; 
   }
   
   .marathon-card p {
     margin-bottom: 10px;
-    color: #fff; /* Цвят на текста */
+    color: #fff; 
   }
   
-  /* Стилове за бутона "Details" */
+  
   .marathon-card button {
     background-color: #0159b1 ;
     border: none;
@@ -45,15 +50,15 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    font-family: 'Roboto', sans-serif; /* Пример за използване на шрифт */
-    font-size: 16px; /* Размер на шрифта */
+    font-family: 'Roboto', sans-serif; 
+    font-size: 16px; 
   }
   
   .marathon-card button:hover {
-    background-color: #0256a6; /* По-тъмна версия на основния цвят при хостване */
+    background-color: #0256a6; 
   }
   
-  /* Допълнителни стилове за анимация при натискане на бутона */
+ 
   .marathon-card button:active {
     transform: translateY(2px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

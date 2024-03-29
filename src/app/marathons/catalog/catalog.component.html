@@ -1,14 +1,10 @@
-
 <div class="fullscreen-background"></div>
 <div class="marathon-container">
-<div class="marathon-card" *ngFor="let marathon of marathons">
-  
+  <div class="marathon-card" *ngFor="let marathon of marathons">
     <img [src]="marathon.image" alt="image">
     <h2>{{ marathon.name }}</h2>
     <p><strong>Location:</strong> {{ marathon.location }}</p>
     <p><strong>Date:</strong> {{ marathon.date }}</p>
-    <!-- <p><strong>Description:</strong> {{ marathon.description }}</p> -->
     <button (click)="showDetails(marathon._id)">Details</button>
   </div>
 </div>
-<!-- (click)="showDetails(marathon)" -->

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Marathon } from '../types/Marathon';
 import { MarathonsService } from '../marathons/marathons.service';
 import { Router } from '@angular/router';
+import { Marathon } from '../types/Marathon';
 
 @Component({
   selector: 'app-home',
@@ -27,7 +27,4 @@ export class HomeComponent implements OnInit {
       }
     );
   }
-  showDetails(marathonId: string): void {
-    this.router.navigate(['/marathons/details', marathonId]);
-}
 }
