@@ -13,13 +13,13 @@ import { EditComponent } from './edit/edit.component';
 
 
 
+
 @NgModule({
   declarations: [
     CreateComponent,
     CatalogComponent,
     DetailsComponent,
     EditComponent,
-  
   ],
   imports: [
     CommonModule,

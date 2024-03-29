@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { MainComponent } from './main/main.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HttpClientModule } from '@angular/common/http';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -17,21 +18,25 @@ import { LoaderComponent } from './loader/loader.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     HomeComponent,
     ErrorComponent,
-    LoaderComponent
+  LoaderComponent
+  
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     CoreModule,
     SharedModule,
     HttpClientModule,
     MatSlideToggleModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [appInterceptorProvider],
   bootstrap: [AppComponent]

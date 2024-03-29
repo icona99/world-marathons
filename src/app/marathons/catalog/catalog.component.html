@@ -1,10 +1,22 @@
 <div class="fullscreen-background"></div>
 <div class="marathon-container">
-  <div class="marathon-card" *ngFor="let marathon of marathons">
-    <img [src]="marathon.image" alt="image">
-    <h2>{{ marathon.name }}</h2>
-    <p><strong>Location:</strong> {{ marathon.location }}</p>
-    <p><strong>Date:</strong> {{ marathon.date }}</p>
-    <button (click)="showDetails(marathon._id)">Details</button>
-  </div>
+  <!-- Показване на индикатор за зареждане -->
+  <!-- <app-loader *ngIf="loading"></app-loader> -->
+
+  <!-- Съдържание на компонента -->
+  <ng-container *ngIf="!loading; else loadingContent">
+    <div class="marathon-card" *ngFor="let marathon of marathons">
+      <img [src]="marathon.image" alt="image">
+      <h2>{{ marathon.name }}</h2>
+      <p><strong>Location:</strong> {{ marathon.location }}</p>
+      <p><strong>Date:</strong> {{ marathon.date }}</p>
+      <button (click)="showDetails(marathon._id)">Details</button>
+    </div>
+  </ng-container>
+
+  <!-- Съдържание за показване по време на зареждане -->
+  <ng-template #loadingContent>
+    <div class="spinner"></div>
+  </ng-template>
 </div>
+

@@ -10,8 +10,9 @@ import { Marathon } from '../types/Marathon';
 })
 export class HomeComponent implements OnInit {
   marathons: Marathon[] = [];
+  loading: boolean = true;
 
-  constructor(private marathonsService: MarathonsService,private router:Router) { }
+  constructor(private marathonsService: MarathonsService, private router: Router) { }
 
   ngOnInit(): void {
     this.fetchMarathons();
@@ -21,10 +22,14 @@ export class HomeComponent implements OnInit {
     this.marathonsService.getAllMarathons().subscribe(
       (data: Marathon[]) => {
         this.marathons = data;
+        this.loading = false; 
       },
       (error) => {
         console.error('Error fetching marathons:', error);
+        this.loading = false; 
       }
     );
   }
 }
+
+
