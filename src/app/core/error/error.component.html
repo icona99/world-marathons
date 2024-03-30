@@ -1,9 +1,5 @@
-<!-- error.component.html -->
-<div class="error-container" *ngIf="errorMessage">
+<div class="error-container" *ngIf="displayError" [@heartbeat]="animationState">
     <div class="error-message">
-      <p>{{ errorMessage }}</p>
-      <button class="close-button" (click)="closeError()">Close</button>
+        <p>{{ errorMessage }}</p>
     </div>
-  </div>
-  
-  
+</div>

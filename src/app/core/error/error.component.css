@@ -1,37 +1,24 @@
-// error.component.scss
 .error-container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(255, 0, 0, 0.9); /* Прилагайте цвета, който предпочитате */
-  color: white;
-  border-radius: 8px;
-  padding: 20px;
-  animation: fadeOut 5s forwards; /* Анимация за избледняване */
-}
+    position: fixed;
+    top: 20%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background-color: #f44336; 
+    color: #ffffff;
+    border-radius: 10px; 
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    width: 90%; 
+    max-width: 650px; 
+    animation: heartbeat 1s infinite alternate; 
+  }
+  
+  @keyframes heartbeat {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+  }
+  
 
-.error-message {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.close-button {
-  background-color: #ffffff; /* Цвят на бутона */
-  color: rgba(255, 0, 0, 0.9); /* Цвят на икона */
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
-}
 
 
   
