@@ -10,13 +10,13 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     width: 90%; 
     max-width: 650px; 
-    animation: heartbeat 1s infinite alternate; 
+    animation: bouncedown 1s infinite alternate; 
   }
   
-  @keyframes heartbeat {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.1); }
-  }
+  @keyframes bouncedown {
+    0% { transform: translateY(-20px); }
+    100% { transform: translateY(20px); }
+}
   
 
 
