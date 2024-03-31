@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="button-container">
-        <button class="edit-btn" [routerLink]="'/marathons/edit/' + marathon._id">Edit</button>
+        <button class="edit-btn" [routerLink]="['/marathons/edit', marathon._id]">Edit</button>
         <button class="delete-btn" [disabled]="!marathonId" (click)="deleteMarathon()">Delete</button>
     </div>
 </div>

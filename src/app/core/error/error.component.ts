@@ -31,7 +31,7 @@ export class ErrorComponent implements OnInit {
       this.triggerAnimation();
       setTimeout(() => {
         this.displayError = false;
-      }, 6000);
+      }, 5000);
     });
   };
 

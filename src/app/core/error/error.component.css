@@ -10,7 +10,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     width: 90%; 
     max-width: 650px; 
-    animation: bouncedown 1s infinite alternate; 
+   animation: bouncedown 1s infinite alternate; 
   }
   
   @keyframes bouncedown {

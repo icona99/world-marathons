@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MarathonsService } from '../marathons.service';
 import { Marathon } from 'src/app/types/Marathon';
-import { CutTextPipe } from 'src/app/shared/pipes/cut-text.pipe';
 
 @Component({
   selector: 'app-details',
