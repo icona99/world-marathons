@@ -1,24 +1,62 @@
 <div class="fullscreen-background"></div>
-<div class="edit-container" *ngIf="marathon">
-    <h2>{{ marathon.name }}</h2>
-    <div class="edit-image">
-        <img [src]="marathon.image" alt="{{ marathon.name }}" *ngIf="marathon.image">
-    </div>
-    <div class="edit-info">
-        <div class="edit-section">
-            <p><strong>Location:</strong> 
-                <input type="text" [(ngModel)]="marathon.location" name="location">
-            </p>
-            <p><strong>Date:</strong> 
-                <input type="text" [(ngModel)]="marathon.date" name="date">
-            </p>
-            <p><strong>Description:</strong> 
-                <textarea [(ngModel)]="marathon.description" name="description"></textarea>
-            </p>
+<section id="edit-page">
+    <div class="editSection">
+        <div class="info">
         </div>
-    </div>
-    <div class="button-container">
-        <button class="edit-btn" (click)="saveChanges()">Save changes</button>
-    </div>
-</div>
+        <form class="editForm" #form="ngForm" >
+            <h2>Edit Race</h2>
+            <ul class="noBullet">
+                <li>
+                    <label for="name">Name:</label>
+                    <input type="name" class="inputFields" id="name" name="name" #inputName="ngModel" ngModel required
+                        minlength="6" />
+                    <ng-container *ngIf="inputName.touched">
+                        <p class="error" *ngIf="inputName?.errors?.['required']">Name is required!</p>
+                        <p class="error" *ngIf="inputName?.errors?.['minlength']">Name must be at least 5 characters
+                            long!</p>
+                    </ng-container>
+                </li>
+                <li>
+                    <label for="location">Location:</label>
+                    <input type="text" class="inputFields" id="location" name="location" #inputLocation="ngModel"
+                        ngModel required minlength="6" />
+                    <ng-container *ngIf="inputLocation.touched">
+                        <p class="error" *ngIf="inputLocation?.errors?.['required']">Location is required!</p>
+                        <p class="error" *ngIf="inputLocation?.errors?.['minlength']">Location must be at least 5
+                            characters long!</p>
+                    </ng-container>
+                </li>
+                <li>
+                    <label for="image">Image:</label>
+                    <input type="text" class="inputFields" id="image" name="image" #inputImage="ngModel" ngModel
+                        required />
+                    <ng-container *ngIf="inputImage.touched">
+                        <p class="error" *ngIf="inputImage?.errors?.['required']">Image is required!</p>
+                    </ng-container>
+                </li>
+                <li>
+                    <label for="date">Date:</label>
+                    <input type="date" class="inputFields" id="date" name="date" #inputDate="ngModel" ngModel
+                        required />
+                    <ng-container *ngIf="inputDate.touched">
+                        <p class="error" *ngIf="inputDate?.errors?.['required']">Date is required!</p>
+                    </ng-container>
 
+                </li>
+                <li>
+                    <label for="description">Description:</label>
+                    <textarea id="description" class="inputFields" name="description" #textareaDescription="ngModel"
+                        ngModel required minlength="20"></textarea>
+                    <ng-container *ngIf="textareaDescription.touched">
+                        <p class="error" *ngIf="textareaDescription?.errors?.['required']">Description is required!</p>
+                        <p class="error" *ngIf="textareaDescription?.errors?.['minlength']">Description must be at
+                            least 20 characters long!</p>
+                    </ng-container>
+                </li>
+                <li id="center-btn">
+                    <button id="edit-btn" (click)="saveChanges(form)">Save</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+</section>
