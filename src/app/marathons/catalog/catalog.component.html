@@ -1,9 +1,5 @@
 <div class="fullscreen-background"></div>
 <div class="marathon-container">
-  <!-- Показване на индикатор за зареждане -->
-  <!-- <app-loader *ngIf="loading"></app-loader> -->
-
-  <!-- Съдържание на компонента -->
   <ng-container *ngIf="!loading; else loadingContent">
     <div class="marathon-card" *ngFor="let marathon of marathons">
       <img [src]="marathon.image" alt="image">
@@ -14,7 +10,6 @@
     </div>
   </ng-container>
 
-  <!-- Съдържание за показване по време на зареждане -->
   <ng-template #loadingContent>
     <div class="spinner"></div>
   </ng-template>

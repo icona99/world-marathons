@@ -1,15 +1,15 @@
 .loader {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Центриране по хоризонтала */
-  justify-content: flex-start; /* Преместване нагоре */
-  height: 100vh; /* За да центрира целия лоудър по средата на екрана */
+  align-items: center; 
+  justify-content: flex-start; 
+  height: 100vh; 
 }
 
 
 .spinner {
-  width: 400px; /* Ширина на спинъра (може да се промени според нуждите) */
-  height: 400px; /* Височина на спинъра (може да се промени според нуждите) */
+  width: 400px; 
+  height: 400px; 
   border-radius: 50%;
   overflow: hidden;
 }
@@ -22,9 +22,9 @@
 }
 
 .loading-text {
-  margin-top: 30px; /* Отстояние между снимката и текста */
-  font-size: 44px; /* Големина на шрифта на текста (може да се промени според нуждите) */
-  color: #000000; /* Черен цвят */
+  margin-top: 30px; 
+  font-size: 44px;
+  color: #000000; 
 }
 
 @keyframes pulse-animation {

@@ -13,7 +13,7 @@ export class AuthService {
 
   user: User | undefined;
   USER_KEY = '[user]'
-  redirectUrl: string | undefined;
+ 
 
 
   constructor(private http: HttpClient) {

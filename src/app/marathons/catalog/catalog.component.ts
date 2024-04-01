@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class CatalogComponent implements OnInit {
   marathons: Marathon[] = [];
-  loading: boolean = false; // Флаг, указващ дали зареждането на маратоните е в процес
+  loading: boolean = false; 
 
   constructor(private marathonsService: MarathonsService, private router: Router) { }
 
@@ -19,15 +19,15 @@ export class CatalogComponent implements OnInit {
   }
 
   fetchMarathons(): void {
-    this.loading = true; // Започваме зареждането
+    this.loading = true; 
     this.marathonsService.getAllMarathons().subscribe(
       (data: Marathon[]) => {
         this.marathons = data;
-        this.loading = false; // Завършваме зареждането
+        this.loading = false; 
       },
       (error) => {
         console.error('Error fetching marathons:', error);
-        this.loading = false; // Завършваме зареждането при грешка
+        this.loading = false; 
       }
     );
   }
