@@ -12,7 +12,7 @@
     <input formControlName="email" type="email" name="email" id="email" placeholder="Email" required/>
     <ng-container *ngIf="form.get('email')?.touched">
       <p class="error" *ngIf="form.get('email')?.errors?.['required']">Email is required!</p>
-      <p class="error" *ngIf="form.get('email')?.errors?.['email']">Invalid email</p>
+      <p class="error" *ngIf="form.get('email')?.errors?.['emailValidator']">Invalid email</p>
     </ng-container>
 
     <div formGroupName="passGroup">
