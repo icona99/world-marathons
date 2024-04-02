@@ -4,7 +4,7 @@ import { CreateComponent } from "./create/create.component";
 import { CatalogComponent } from "./catalog/catalog.component";
 import { DetailsComponent } from "./details/details.component";
 import { EditComponent } from "./edit/edit.component";
-import { AuthGuard } from "../auth.guard";
+import { AuthGuard } from "../routeGuards/auth.guard";
 
 const routes: Routes = [{ path: 'catalog', component: CatalogComponent,canActivate:[AuthGuard] },
 { path: 'create', component: CreateComponent,canActivate:[AuthGuard] },
