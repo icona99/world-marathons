@@ -7,7 +7,7 @@
 
 .marathon-card {
   position: relative; 
-  background-color:  rgba(131, 133, 136, 0.5);
+  background-color:  rgba(131, 133, 136, 0.7);
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 400px;
@@ -19,7 +19,7 @@
 }
 .marathon-card:hover {
   display: block; 
-  background-color: #0159b1;
+  background-color: #61a0f1;;
 }
 
 .marathon-card img {
