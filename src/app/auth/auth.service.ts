@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { User } from '../types/User';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject,  tap } from 'rxjs';
+import { BehaviorSubject, tap } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
- 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,7 +13,7 @@ export class AuthService {
 
   user: User | undefined;
   USER_KEY = '[user]'
- 
+
 
 
   constructor(private http: HttpClient) {
@@ -54,7 +54,6 @@ export class AuthService {
           localStorage.setItem('userId', res._id);
           this.user$$.next({
             email: res.email,
-
             _id: res._id,
             accessToken: res.accessToken
           });

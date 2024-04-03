@@ -1,0 +1,21 @@
+<div class="fullscreen-background"></div>
+<div class="search-container">
+    <input class="search-input" type="text" placeholder="Search by name" [(ngModel)]="searchMarathon" (keyup.enter)="search()">
+    <button class="search-button" (click)="search()">Search</button>
+</div>
+
+<div *ngIf="searched && marathons.length === 0" class="no-results-message">
+    No marathons found.
+</div>
+
+<div *ngIf="searched && marathons.length > 0" class="marathon-list">
+    <div *ngFor="let marathon of marathons">
+        <div class="marathon-card">
+            <img [src]="marathon.image" alt="Marathon Image">
+            <h3>{{ marathon.name }}</h3>
+            <p>Date: {{ marathon.date }}</p>
+            <p>Location: {{ marathon.location }}</p>
+            <button (click)="showDetails(marathon._id)">Details</button>
+        </div>
+    </div>
+</div>

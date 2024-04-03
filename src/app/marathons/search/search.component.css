@@ -1,0 +1,116 @@
+.marathon-list {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+}
+
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 16px; 
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-right: 10px;
+  font-size: 18px; 
+}
+
+.search-button {
+  padding: 16px 32px; 
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.no-results-message {
+  font-size: 58px;
+  color: red;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  text-align: center; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.marathon-card {
+  position: relative; 
+  background-color:  rgba(131, 133, 136, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  height: 400px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+.marathon-card:hover {
+  display: block; 
+  background-color: #0159b1;
+}
+
+.marathon-card img {
+  width: 100px;
+  height: 100px; 
+  object-fit: cover; 
+  border-radius: 10px; 
+}
+
+
+.marathon-card h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #fff; 
+}
+
+.marathon-card p {
+  margin-bottom: 10px;
+  color: #fff;
+  overflow: hidden; 
+  max-height: 100px; 
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+}
+
+
+.marathon-card button {
+  position: absolute; 
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  background-color: #0159b1;
+  border: none;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+.marathon-card button:hover {
+  background-color: #0256a6; 
+}
+
+
+.marathon-card button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+

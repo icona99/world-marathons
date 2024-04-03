@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, tap } from 'rxjs';
+import { BehaviorSubject, Observable, map, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Marathon } from '../types/Marathon';
 
@@ -41,10 +41,16 @@ export class MarathonsService {
     const editUrl = `${this.apiUrl}/data/marathons/${marathon._id}`; 
     return this.http.put<Marathon>(editUrl, marathon);
   }
+
+  searchMarathonsByName(name: string): Observable<Marathon[]> {
+    return this.getAllMarathons().pipe(
+      map((marathons: Marathon[]) => {
+        return marathons.filter(marathon => marathon.name.toLowerCase().includes(name.toLowerCase()));
+      })
+    );
   
 }
+  
 
-
-
-
+}
 

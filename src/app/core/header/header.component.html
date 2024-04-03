@@ -8,6 +8,7 @@
         <li *ngIf="!isLoggedIn"><a routerLink="/auth/register">Register</a></li>
         <li *ngIf="isLoggedIn"><a routerLink="/marathons/catalog">Catalog</a></li>
         <li *ngIf="isLoggedIn"><a routerLink="/marathons/create">Create</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="/marathons/search">Search</a></li>
         <li *ngIf="isLoggedIn"><a (click)="logout()">Logout</a></li>
     </ul>
 

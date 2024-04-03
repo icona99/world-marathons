@@ -7,6 +7,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { DetailsComponent } from './details/details.component';
 import { SharedModule } from '../shared/shared.module';
 import { EditComponent } from './edit/edit.component';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -20,6 +21,7 @@ import { EditComponent } from './edit/edit.component';
     CatalogComponent,
     DetailsComponent,
     EditComponent,
+    SearchComponent,
   ],
   imports: [
     CommonModule,
