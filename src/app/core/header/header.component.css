@@ -1,0 +1,41 @@
+nav {
+    background-color: #1b48c4;
+    padding: 0;
+    overflow: hidden; 
+  }
+  
+  nav img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .menu li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .menu li:last-child {
+    margin-right: 0;
+  }
+  
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 28px; 
+    transition: color 0.3s;
+  }
+  
+  .menu a:hover {
+    color: #ff6600;
+  }
+  
