@@ -19,7 +19,7 @@ export class LoaderComponent implements OnInit {
       this.loading = false; 
       this.stateName = 'normal'; 
       this.router.navigate(['/home']);
-    }, 3000); 
+    }, 2000); 
   }
 }
 
