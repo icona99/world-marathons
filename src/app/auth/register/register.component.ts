@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmailValidator, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { passwordMatchValidator } from 'src/app/shared/validators/passwordsmatching';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';

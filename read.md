@@ -67,6 +67,7 @@ Our Angular project includes the following features:
   - View Details: Users can view detailed information about specific marathon events.
   - Edit Event: Authenticated users can edit the details of the events they created.
   - Delete Event: Authenticated users can delete events they no longer wish to manage.
+  - Search Event: Authenticated users can search for specific marathon eveby name.
 
 ## Technologies Used
 
@@ -90,7 +91,8 @@ To use this application effectively, follow these guidelines:
 - **Browse Catalog**: Explore the available marathons in the catalog.
 - **Create Event**: If you're logged in, create a new marathon event by providing necessary details.
 - **View Details**: Click on a specific event to view detailed information.
-- **Edit/Delete Event**: If you're the owner of an event, you can edit its details or delete it entirely.
+- **Edit/Delete Event**: If you're logged user, you can edit its details or delete it entirely.
+- **Search Event**: If you're logged in, search for marathon event by providing name.
 
 ## Contributing
 
@@ -98,4 +100,4 @@ Contributions to this project are welcome! If you find any issues or have sugges
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the Icona.

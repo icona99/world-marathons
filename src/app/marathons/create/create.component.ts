@@ -18,6 +18,9 @@ export class CreateComponent {
       return;
     }
     const { name, location, image, date, description } = form.value;
+    if (name.trim() === '' || location.trim() === '' || image.trim() === '' || date.trim() === '' || description.trim() === '') {
+      return;
+    }
     this.marathonsService.create(name, location, image, date, description)
       .subscribe((createdMarathon: Marathon) => {
         this.router.navigate(['/marathons/catalog']);
