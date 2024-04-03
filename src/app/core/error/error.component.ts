@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ErrorService } from './error.service';
+import { Router } from '@angular/router';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
@@ -23,7 +24,8 @@ export class ErrorComponent implements OnInit {
   displayError = false;
   animationState = 'initial';
 
-  constructor(private errorService: ErrorService) { }
+  constructor(private errorService: ErrorService, private router: Router) { }
+
   ngOnInit(): void {
     this.errorService.error$.subscribe((err: any) => {
       this.errorMessage = err?.message || '';
@@ -31,11 +33,25 @@ export class ErrorComponent implements OnInit {
       this.triggerAnimation();
       setTimeout(() => {
         this.displayError = false;
+        if (err.status === 401) {
+          this.router.navigate(['/auth/login']);
+        } else if (err.status === 403) {
+          this.router.navigate(['/auth/login']);
+        } else if (err.status === 404) {
+          this.router.navigate(['/not-found']);
+        } else if (err.status === 500 || err.status === 503) {
+          this.errorMessage = 'An internal server error occurred. Please try again later.';
+          this.router.navigate(['/error']);
+        }
+        else {
+          this.router.navigate(['/error']);
+        }
       }, 5000);
     });
-  };
+  }
 
   triggerAnimation() {
     this.animationState = this.animationState === 'initial' ? 'final' : 'initial';
-  };
+  }
 }
+
