@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import {  NotFoundComponent } from './not-found/notFound.component';
 import { appInterceptorProvider } from './app.intereseptor';
 import { LoaderComponent } from './loader/loader.component';
+import { SlicePipe } from '@angular/common';
 
 
 
@@ -36,6 +37,7 @@ NotFoundComponent,
     HttpClientModule,
     MatSlideToggleModule,
     AppRoutingModule,
+    SlicePipe
 
   ],
   providers: [appInterceptorProvider],

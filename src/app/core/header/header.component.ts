@@ -20,7 +20,8 @@ export class HeaderComponent {
       next: () => {
         this.router.navigate(['/'])
       },
-      error: () => {
+      error: (error) => {
+        console.error('Error during logout:', error);
         this.router.navigate(['/'])
       }
 
