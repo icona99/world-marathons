@@ -2,7 +2,7 @@ nav {
   background-color: #1b48c4;
   padding: 0;
   overflow: hidden; 
-  align-items: center; /* Центриране по вертикалата */
+  align-items: center; 
 }
 
 nav img {
@@ -34,15 +34,14 @@ nav img {
   text-decoration: none;
   font-size: 28px; 
   transition: color 0.3s;
-  display: flex; /* Превръщане на елемента във флекс контейнер */
-  align-items: center; /* Центриране по вертикалата */
+  display: flex; 
+  align-items: center; 
 }
 
 .menu a:hover {
   color: #383837;
 }
 
-/* Центриране на текста в хедъра по вертикалата */
 .menu a span {
   margin: auto;
 }
