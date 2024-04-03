@@ -12,43 +12,55 @@ import { NgForm } from '@angular/forms';
 export class EditComponent implements OnInit {
   marathon: Marathon | undefined;
   marathonId: string | null = null;
-  
+
   constructor(private marathonsService: MarathonsService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    this.marathonId = id ?? null; 
+    this.marathonId = id ?? null;
     if (this.marathonId) {
       this.marathonsService.getMarathonById(this.marathonId).subscribe((marathon: Marathon) => {
-         this.marathon = marathon;
+        this.marathon = marathon;
       }, (error: any) => {
         console.error(error);
       });
     }
   }
-  
+
 
   saveChanges(form: NgForm): void {
     if (form.invalid) {
       return;
     }
-  
-    const formData = form.value; 
+
+    const formData = form.value;
+    if (
+      formData.name.trim() === '' ||
+      formData.location.trim() === '' ||
+      formData.image.trim() === '' ||
+      formData.date.trim() === '' ||
+      formData.description.trim() === ''
+    ) {
+      return;
+    }
+
     const editedMarathon: Marathon = {
-      _id: this.marathonId ?? '', 
+      _id: this.marathonId ?? '',
       name: formData.name,
       location: formData.location,
       image: formData.image,
       date: formData.date,
       description: formData.description
     };
-  
+
+
+
     this.marathonsService.editMarathon(editedMarathon).subscribe((editedMarathon: Marathon) => {
-      this.router.navigate(['/marathons/details', editedMarathon._id]); 
+      this.router.navigate(['/marathons/details', editedMarathon._id]);
     }, (error: any) => {
       console.error(error);
     });
   }
-  
-  
+
+
 }
